@@ -1,0 +1,26 @@
+body{
+	max-width: 80%;
+
+}
+div.container-fluid{	
+	padding: 10px;
+}
+.center{
+	text-align: center;
+	margin: 0 auto;	
+	padding: 20px 10%;
+}
+.justfy{
+	text-align: justify;
+	margin: 0 auto;	
+	padding: 20px 10%;
+}
+p{
+	text-align: justify;
+}
+footer p{
+	text-align: center;
+}
+div.panel{
+	padding: 10px;
+}
