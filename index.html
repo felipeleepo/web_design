@@ -69,9 +69,52 @@
 			</footer>
 			<script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
 			<script type="text/javascript">
+				
+				arrayLangPt = {
+					'pagina_inicial' : 'Página Inicial',
+					'produtos'		 : 'Produtos',
+					'servicos'		 : 'Serviços',
+					'quem_somos'	 : 'Quem Somos',
+					'fale_conosco'	 : 'Fale Conosco'
+				}
+
+				arrayLangEn = {
+					'pagina_inicial' : 'Home Page',
+					'produtos'		 : 'Products',
+					'servicos'		 : 'Services',
+					'quem_somos'	 : 'About Us',
+					'fale_conosco'	 : 'Talk Us'
+				}
+
+				
 				$(document).ready(function(){
 					$('header').load('menu.html');
+					
+					//traduzir('pt');
 				});
+
+				$('.lang').on('click', function(){
+					
+					console.log('oi')
+					traduzir($(this).data('lang'));
+				});
+
+				function traduzir(l){
+
+					if (l == 'en') {
+						convert(arrayLangEn);
+					}else{
+						convert(arrayLangPt);
+					}					
+				}
+
+				function convert(array){
+					
+					$.map(array,function(val, key){
+						$('#'+key).text(val);
+						console.log($('#'+key))
+					});
+				}
 			</script>
 		</body>
 		</html>
