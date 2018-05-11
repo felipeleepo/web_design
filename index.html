@@ -17,47 +17,47 @@
 						<div class="card col-sm-4">
 							<div class="panel panel-default">
 								<div class="panel-heading center">
-									<h3>Pra Você</h3>
+									<h3 class="pra_voce">Pra Você</h3>
 								</div>
 								<div class="panel-body justify">
 									<img class="card-img-top" src="img/vc.jpg" width="300" height="230" alt="Card image cap">
 									<br><br><br>
-									<p>O GetInShape vem para revolucionar a área de saúde e estética, trazendo uma plataforma feita para usuário que se dedicam ao extremo!</p>
+									<p class="card1">O GetInShape vem para revolucionar a área de saúde e estética, trazendo uma plataforma feita para usuário que se dedicam ao extremo!</p>
 								</div>
 								<div class="panel-footer center">
-									<a href="quem_somos.html" class="btn btn-dark">Conheça-nos</a>
+									<a href="quem_somos.html" class="btn btn-dark conheca_nos">Conheça-nos</a>
 								</div>
 							</div>
 						</div>
 						<div class="card col-sm-4">
 							<div class="panel panel-default">
 								<div class="panel-heading center">
-									<h3>Produtos</h3>
+									<h3 class="produtos">Produtos</h3>
 								</div>
 								<div class="panel-body justify">
 									<img class="center" src="img/produto.png" width="300" height="230" alt="Card image cap">
 									<br><br><br>
-									<p>Apresentamos ao mercado os melhores produtos para a sua rotina de exercícios e alimentação diários!</p>
+									<p class="card2">Apresentamos ao mercado os melhores produtos para a sua rotina de exercícios e alimentação diários!</p>
 									<br>
 								</div>
 								<div class="panel-footer center">
-									<a href="produtos.html" class="btn btn-dark">Veja mais</a>
+									<a href="produtos.html" class="btn btn-dark veja_mais">Veja mais</a>
 								</div>
 							</div>
  						</div>
  						<div class="card col-sm-4">
 							<div class="panel panel-default">
 								<div class="panel-heading center">
-									<h3>Fale Conosco</h3>
+									<h3 class="fale_conosco">Fale Conosco</h3>
 								</div>
 								<div class="panel-body justify">
 									<img class="card-img-top" src="img/tele.jpg" width="300" height="230" alt="Card image cap">
 									<br><br><br>
-									<p>Está com dúvida? Entre em contato para que possamos te ajudar!</p>
+									<p class="card3">Está com dúvida? Entre em contato para que possamos te ajudar!</p>
 									<br><br>
 								</div>
 								<div class="panel-footer center">
-									<a href="fale_conosco.html" class="btn btn-dark">Contate-nos</a>
+									<a href="fale_conosco.html" class="btn btn-dark contate_nos">Contate-nos</a>
 								</div>
 							</div>
  						</div>
@@ -65,56 +65,15 @@
 				</div>
 			</section>
 			<footer>
-				<p>Copyright 2017. Todos os direitos reservados</p>
+				<p class="direitos">Copyright 2017. Todos os direitos reservados</p>
 			</footer>
 			<script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
+			
 			<script type="text/javascript">
 				
-				arrayLangPt = {
-					'pagina_inicial' : 'Página Inicial',
-					'produtos'		 : 'Produtos',
-					'servicos'		 : 'Serviços',
-					'quem_somos'	 : 'Quem Somos',
-					'fale_conosco'	 : 'Fale Conosco'
-				}
-
-				arrayLangEn = {
-					'pagina_inicial' : 'Home Page',
-					'produtos'		 : 'Products',
-					'servicos'		 : 'Services',
-					'quem_somos'	 : 'About Us',
-					'fale_conosco'	 : 'Talk Us'
-				}
-
-				
 				$(document).ready(function(){
-					$('header').load('menu.html');
-					
-					//traduzir('pt');
+					$('html').find('header').load('menu.html')
 				});
-
-				$('.lang').on('click', function(){
-					
-					console.log('oi')
-					traduzir($(this).data('lang'));
-				});
-
-				function traduzir(l){
-
-					if (l == 'en') {
-						convert(arrayLangEn);
-					}else{
-						convert(arrayLangPt);
-					}					
-				}
-
-				function convert(array){
-					
-					$.map(array,function(val, key){
-						$('#'+key).text(val);
-						console.log($('#'+key))
-					});
-				}
 			</script>
 		</body>
 		</html>

@@ -14,37 +14,52 @@
 		color: #fff;
 		text-decoration: none;
 	}
+	.lang{
+		cursor:pointer;
+	}
+	.lang:hover{
+		border: 1px solid black;
+	}
 </style>
 <div class="center row" style="font-size: 30px">
 		<div class="col-md-11">
 			<img src="img/logo.png" width="100"> <b>Get</b> in Shape		
 		</div>
 		<div class="col-md-1">
-			<img src="img/flag-brazil.png" class="lang" data-lang="pt" width="30"><img src="img/flag-usa.png" class="lang" data-lang="en" width="30">
+			<div class="row">
+				<div class="col-md-12">
+					<img src="img/flag-brazil.png" class="lang" data-lang="pt" width="30">
+				</div>
+				<div class="col-md-12">
+					<img src="img/flag-usa.png" class="lang" data-lang="en" width="30">
+				</div>
+			</div>
+			
 		</div>
 	
 </div>
 <nav>
 	<ul class="nav nav-pills nav-fill">
 	  	<li class="nav-item">
-	    	<a class="nav-link" href="index.html"><i class="fa fa-home"></i>&nbsp;&nbsp;<span id="pagina_inicial"></span></a>
+	    	<a class="nav-link" href="index.html"><i class="fa fa-home pagina"></i>&nbsp;&nbsp;<span class="pagina_inicial">Página Inicial</span></a>
 	  	</li>
 	  	<li class="nav-item">
-	    	<a class="nav-link" href="produtos.html"><i class="fa fa-suitcase"></i>&nbsp;&nbsp;<span id="produtos"></span></a>
+	    	<a class="nav-link" href="produtos.html"><i class="fa fa-suitcase"></i>&nbsp;&nbsp;<span class="produtos">Produtos</span></a>
 	  	</li>
 	  	<li class="nav-item">
-	    	<a class="nav-link" href="servicos.html"><i class="fa fa-wrench"></i>&nbsp;&nbsp;<span id="servicos"></span></a>
+	    	<a class="nav-link" href="servicos.html"><i class="fa fa-wrench"></i>&nbsp;&nbsp;<span class="servicos">Serviços</span></a>
 	  	</li>
 	  	<li class="nav-item">
-	    	<a class="nav-link" href="quem_somos.html"><i class="fa fa-question"></i>&nbsp;&nbsp;<span id="quem_somos"></span></a>
+	    	<a class="nav-link" href="quem_somos.html"><i class="fa fa-question"></i>&nbsp;&nbsp;<span class="quem_somos">Quem Somos</span></a>
 	  	</li>
 	  	<li class="nav-item">
-	    	<a class="nav-link" href="fale_conosco.html"><i class="fa fa-phone"></i>&nbsp;&nbsp;<span id="fale_conosco"></span></a>
+	    	<a class="nav-link" href="fale_conosco.html"><i class="fa fa-phone"></i>&nbsp;&nbsp;<span class="fale_conosco">Fale Conosco</span></a>
 	  	</li>
 	</ul>				
 </nav>
 
 <script type="text/javascript">
+
 	$('li.nav-item').mouseenter(function(){
 		$(this).find('a').addClass('hover');
 	});	
@@ -52,3 +67,4 @@
 		$(this).find('a').removeClass('hover');
 	});	
 </script>
+<script type="text/javascript" src="js/translate.js"></script>
